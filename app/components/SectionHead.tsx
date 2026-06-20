@@ -1,0 +1,37 @@
+import type { ReactNode } from 'react'
+import type { LucideIcon } from 'lucide-react'
+
+import { Eyebrow } from './Eyebrow'
+
+type SectionHeadProps = {
+  eyebrow: ReactNode
+  title: ReactNode
+  /** truthful item count for this section, e.g. `03 marcas` */
+  count: string
+  variant?: 'purple' | 'magenta'
+  icon?: LucideIcon
+}
+
+export function SectionHead({
+  eyebrow,
+  title,
+  count,
+  variant,
+  icon,
+}: SectionHeadProps) {
+  return (
+    <div className='mb-11 flex items-end justify-between gap-5 border-b-[3px] border-bone pb-6'>
+      <div>
+        <Eyebrow variant={variant} icon={icon}>
+          {eyebrow}
+        </Eyebrow>
+        <h2 className='glitch mt-4 font-display text-[clamp(34px,6vw,64px)] uppercase leading-[0.9] tracking-[-0.02em]'>
+          {title}
+        </h2>
+      </div>
+      <span className='hidden shrink-0 pb-[6px] font-mono text-[13px] uppercase tracking-[3px] text-bone-dim bp:block'>
+        {count}
+      </span>
+    </div>
+  )
+}

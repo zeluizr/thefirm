@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, FlaskConical } from 'lucide-react'
 
-import { Eyebrow } from './Eyebrow'
+import { SectionHead } from './SectionHead'
 import { Wrap } from './Wrap'
 
 type Experiment = {
@@ -99,14 +99,18 @@ export function Lab() {
   return (
     <section id='lab' className='py-[84px]'>
       <Wrap>
-        <div className='mb-11'>
-          <Eyebrow icon={FlaskConical}>el laboratorio</Eyebrow>
-          <h2 className='glitch mt-4 font-display text-[clamp(34px,6vw,64px)] uppercase leading-[0.9] tracking-[-0.02em]'>
-            experimentos
-            <br />
-            sueltos
-          </h2>
-        </div>
+        <SectionHead
+          icon={FlaskConical}
+          eyebrow='el laboratorio'
+          count='06 proyectos'
+          title={
+            <>
+              experimentos
+              <br />
+              sueltos
+            </>
+          }
+        />
         <p className='mb-[38px] max-w-[560px] font-medium text-bone-dim'>
           Cosas que construí porque me dieron ganas. Algunas se vuelven producto,
           otras aprendizaje — y está bien.

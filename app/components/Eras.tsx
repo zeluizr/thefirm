@@ -1,6 +1,6 @@
 import { History } from 'lucide-react'
 
-import { Eyebrow } from './Eyebrow'
+import { SectionHead } from './SectionHead'
 import { Wrap } from './Wrap'
 
 type Era = {
@@ -43,16 +43,19 @@ export function Eras() {
   return (
     <section id='origin' className='py-[84px]'>
       <Wrap>
-        <div className='mb-11'>
-          <Eyebrow variant='magenta' icon={History}>
-            la ficha del dominio
-          </Eyebrow>
-          <h2 className='glitch mt-4 font-display text-[clamp(34px,6vw,64px)] uppercase leading-[0.9] tracking-[-0.02em]'>
-            las vidas de
-            <br />
-            esta dirección
-          </h2>
-        </div>
+        <SectionHead
+          variant='magenta'
+          icon={History}
+          eyebrow='la ficha del dominio'
+          count='04 vidas'
+          title={
+            <>
+              las vidas de
+              <br />
+              esta dirección
+            </>
+          }
+        />
 
         {eras.map((era, i) => {
           // mirrors `.era:nth-child(odd)` in the reference: eras 02 and 04 are

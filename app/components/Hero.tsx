@@ -3,6 +3,13 @@ import { Skull } from 'lucide-react'
 import { Eyebrow } from './Eyebrow'
 import { Wrap } from './Wrap'
 
+const navLinks = [
+  { label: 'origen', href: '#origin' },
+  { label: 'la firma', href: '#firm' },
+  { label: 'el lab', href: '#lab' },
+  { label: 'contacto', href: '#contacto' },
+]
+
 function Stamp() {
   return (
     <div className='inline-flex shrink-0 items-stretch border-[3px] border-bone shadow-hard-sm'>
@@ -42,8 +49,25 @@ function Anniversary() {
 
 export function Hero() {
   return (
-    <header className='relative pt-[70px] pb-10'>
+    <header className='relative pb-10'>
       <Wrap>
+        <div className='flex items-center justify-between gap-4 pt-6 pb-9'>
+          <span className='font-mono text-[15px] font-bold tracking-[1px] text-bone'>
+            thefirm<b className='text-wire'>.</b>com.br
+          </span>
+          <nav className='hidden gap-1 bp:flex'>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className='border-2 border-transparent px-3 py-[6px] font-mono text-[13px] uppercase tracking-[1px] transition-colors duration-150 hover:border-bone hover:bg-magenta hover:text-void motion-reduce:transition-none'
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
         <div className='mb-6'>
           <Eyebrow variant='magenta'>
             est. 20/03/2007 · santiago, cl · v2.0

@@ -4,7 +4,6 @@ import { Hero } from '~/components/Hero'
 import { Lab } from '~/components/Lab'
 import { Operations } from '~/components/Operations'
 import { Ticker } from '~/components/Ticker'
-import { TopBar } from '~/components/TopBar'
 
 import type { Route } from './+types/home'
 
@@ -22,7 +21,6 @@ export function meta(_: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      <TopBar />
       <Hero />
       <Ticker />
       <main>
