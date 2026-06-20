@@ -39,7 +39,7 @@ const eras: Era[] = [
 
 export function Eras() {
   return (
-    <section id='origin' className='py-20 bp:py-[120px]'>
+    <section id='origin' className='py-20 bp:py-30'>
       <Wrap>
         <SectionHead
           eyebrow='la ficha del dominio'
@@ -77,11 +77,11 @@ export function Eras() {
                 <h3 className='mb-3 text-[24px] font-bold leading-[1.15] text-bone'>
                   {era.title}
                 </h3>
-                <p className='max-w-[640px] leading-[1.6] text-bone-dim'>
+                <p className='max-w-160 leading-[1.6] text-bone-dim'>
                   {era.body}
                 </p>
                 <span
-                  className={`mt-4 inline-block border-2 border-bone px-[10px] py-1 font-mono text-[12px] uppercase leading-none tracking-[1px] ${
+                  className={`mt-4 inline-block border-2 border-bone px-2.5 py-1 font-mono text-[12px] uppercase leading-none tracking-[1px] ${
                     era.alive ? 'bg-magenta text-void' : 'text-bone'
                   }`}
                 >

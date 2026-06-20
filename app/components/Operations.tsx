@@ -68,7 +68,7 @@ function OpCard({ op }: { op: Operation }) {
       <span className='mt-7 inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[1px] text-bone'>
         visitar
         <ArrowUpRight
-          className='transition-transform duration-150 group-hover:translate-x-[4px] group-hover:-translate-y-[4px] motion-reduce:transition-none'
+          className='transition-transform duration-150 group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transition-none'
           size={16}
           strokeWidth={2.5}
           aria-hidden='true'
@@ -80,7 +80,7 @@ function OpCard({ op }: { op: Operation }) {
 
 export function Operations() {
   return (
-    <section id='firm' className='py-20 bp:py-[120px]'>
+    <section id='firm' className='py-20 bp:py-30'>
       <Wrap>
         <SectionHead
           eyebrow='la firma'

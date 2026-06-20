@@ -60,7 +60,7 @@ function ExpCard({ exp }: { exp: Experiment }) {
       href={exp.href}
       target='_blank'
       rel='noopener'
-      className='group relative flex min-h-[160px] flex-col border-[3px] border-bone p-6 no-underline'
+      className='group relative flex min-h-40 flex-col border-[3px] border-bone p-6 no-underline'
       style={{ backgroundColor: '#1c1526', boxShadow: '4px 4px 0 #ff41b4' }}
       whileHover={
         reduceMotion
@@ -77,7 +77,7 @@ function ExpCard({ exp }: { exp: Experiment }) {
       }
     >
       <ArrowUpRight
-        className='absolute right-[16px] top-[16px] text-bone-dim opacity-0 transition-opacity duration-150 group-hover:opacity-100 motion-reduce:transition-none'
+        className='absolute right-4 top-4 text-bone-dim opacity-0 transition-opacity duration-150 group-hover:opacity-100 motion-reduce:transition-none'
         size={18}
         strokeWidth={2.5}
         aria-hidden='true'
@@ -85,7 +85,7 @@ function ExpCard({ exp }: { exp: Experiment }) {
       <div className='font-display text-[24px] lowercase leading-[1.05] tracking-[-0.01em] text-bone'>
         {exp.name}
       </div>
-      <div className='mt-2 flex-1 text-[15px] font-medium leading-[1.5] text-bone-dim'>
+      <div className='mt-2 flex-1 text-[15px] font-medium leading-normal text-bone-dim'>
         {exp.what}
       </div>
       <div className='mt-4 font-mono text-[11px] uppercase leading-none tracking-[1px] text-bone-dim group-hover:text-magenta motion-reduce:group-hover:text-bone-dim'>
@@ -97,7 +97,7 @@ function ExpCard({ exp }: { exp: Experiment }) {
 
 export function Lab() {
   return (
-    <section id='lab' className='py-20 bp:py-[120px]'>
+    <section id='lab' className='py-20 bp:py-30'>
       <Wrap>
         <SectionHead
           eyebrow='el laboratorio'
@@ -110,7 +110,7 @@ export function Lab() {
             </>
           }
         />
-        <p className='mb-10 max-w-[560px] font-medium leading-[1.55] text-bone-dim'>
+        <p className='mb-10 max-w-140 font-medium leading-[1.55] text-bone-dim'>
           Cosas que construí porque me dieron ganas. Algunas se vuelven producto,
           otras aprendizaje — y está bien.
         </p>

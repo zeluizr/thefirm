@@ -9,7 +9,7 @@ function TickerSet({ keyPrefix }: { keyPrefix: string }) {
     <>
       {phrases.map((phrase, i) => (
         <Fragment key={`${keyPrefix}-${i}`}>
-          <span className='px-[24px]'>{phrase}</span>
+          <span className='px-6'>{phrase}</span>
           <Asterisk
             className='shrink-0 text-magenta'
             size={18}
@@ -27,7 +27,7 @@ export function Ticker() {
 
   return (
     <div
-      className='mt-[30px] overflow-hidden border-y-[3px] border-bone bg-bone py-3 text-void'
+      className='mt-7.5 overflow-hidden border-y-[3px] border-bone bg-bone py-3 text-void'
       aria-hidden='true'
     >
       <motion.div

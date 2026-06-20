@@ -44,7 +44,7 @@ export function Footer() {
   return (
     <footer
       id='contacto'
-      className='border-t-[3px] border-bone bg-void-2 px-0 pt-24 pb-12 text-bone bp:pt-[120px] bp:pb-16'
+      className='border-t-[3px] border-bone bg-void-2 px-0 pt-24 pb-12 text-bone bp:pt-30 bp:pb-16'
     >
       <Wrap>
         <div className='glitch inline-block font-display text-[clamp(44px,9vw,120px)] uppercase leading-[0.82] tracking-[-0.03em]'>
@@ -61,7 +61,7 @@ export function Footer() {
                 {...(link.external
                   ? { target: '_blank', rel: 'noopener' }
                   : {})}
-                className={`inline-flex items-center gap-2 border-2 border-bone px-[14px] py-2 font-mono text-[13px] uppercase leading-none tracking-[1px] no-underline transition-colors duration-150 motion-reduce:transition-none ${
+                className={`inline-flex items-center gap-2 border-2 border-bone px-3.5 py-2 font-mono text-[13px] uppercase leading-none tracking-[1px] no-underline transition-colors duration-150 motion-reduce:transition-none ${
                   link.primary
                     ? 'bg-magenta text-void hover:bg-bone'
                     : 'hover:bg-magenta hover:text-void'

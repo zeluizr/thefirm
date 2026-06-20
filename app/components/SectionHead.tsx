@@ -18,7 +18,7 @@ export function SectionHead({ eyebrow, title, count }: SectionHeadProps) {
           {title}
         </h2>
       </div>
-      <span className='hidden shrink-0 pb-[6px] font-mono text-[13px] uppercase tracking-[3px] text-bone-dim bp:block'>
+      <span className='hidden shrink-0 pb-1.5 font-mono text-[13px] uppercase tracking-[3px] text-bone-dim bp:block'>
         {count}
       </span>
     </div>
