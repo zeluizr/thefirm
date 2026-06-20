@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #efeadd;
+  --color-paper-2: #e6e0cf;
+  --color-ink: #141414;
+  --color-ink-soft: #2b2b2b;
+  --color-teal: #12e0ae;
+  --color-orange: #ff5530;
+  --color-muted: #8a857a;
+  --color-paper-dim: #a8a298;
+
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --shadow-hard: 7px 7px 0 #141414;
+  --shadow-hard-sm: 4px 4px 0 #141414;
+
+  /* single breakpoint mirrors the reference @media (max-width: 720px):
+     base styles are mobile, `bp:` (>=721px) restores the desktop layout */
+  --breakpoint-bp: 721px;
+}
+
+/* outline number used by the eras (paper fill + ink stroke) */
+@utility text-stroke-ink {
+  -webkit-text-stroke: 2.5px var(--color-ink);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 721px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
