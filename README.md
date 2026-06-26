@@ -1,7 +1,5 @@
 ![the firm](.github/cover.png)
 
-# the firm
-
 **thefirm.com.br — un documento sin permiso. Músico, skater, y de vuelta a la web por la escena.**
 
 Landing y manifiesto de _The Firm_: una marca que arrancó hace veinte años en la escena del
