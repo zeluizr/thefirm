@@ -68,7 +68,7 @@ export function HeroFotolog({ posts, total }: { posts: FotologPost[]; total: num
           {/* left — masthead */}
           <motion.div variants={stagger} initial="hidden" animate="show">
             <motion.div variants={reveal} className="mb-6">
-              <Eyebrow>fotolog de ia · o outro josé</Eyebrow>
+              <Eyebrow>loucuras de ia · o outro josé</Eyebrow>
             </motion.div>
 
             <motion.h1
@@ -84,7 +84,7 @@ export function HeroFotolog({ posts, total }: { posts: FotologPost[]; total: num
               variants={reveal}
               className="mt-7 max-w-125 text-[clamp(17px,2.1vw,21px)] font-medium leading-normal text-bone-dim"
             >
-              Um fotolog das minhas{' '}
+              As minhas{' '}
               <b className="bg-magenta px-1 font-bold text-void">loucuras</b> geradas por IA.
               Sem cliente, sem briefing — só imagem, legenda e o que{' '}
               <span className="text-bone">O Outro José</span> resolve transmitir.

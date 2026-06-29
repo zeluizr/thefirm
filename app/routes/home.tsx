@@ -10,11 +10,11 @@ import type { Route } from './+types/home'
 
 export function meta(_: Route.MetaArgs) {
   return [
-    { title: 'the firm — fotolog de ia' },
+    { title: 'the firm — loucuras de ia' },
     {
       name: 'description',
       content:
-        'O fotolog de IA de O Outro José: um mural de loucuras geradas por inteligência artificial. thefirm.com.br',
+        'As loucuras geradas por IA de O Outro José: um mural de imagens e vídeos, sem permissão. thefirm.com.br',
     },
   ]
 }

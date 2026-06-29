@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Asterisk } from 'lucide-react'
 
-const phrases = ['o outro josé', 'loucuras de ia', 'the firm', 'transmissão contínua', 'fotolog']
+const phrases = ['o outro josé', 'loucuras de ia', 'the firm', 'transmissão contínua', 'sem permissão']
 
 function TickerSet({ keyPrefix }: { keyPrefix: string }) {
   return (

@@ -14,7 +14,7 @@ export function meta(_: Route.MetaArgs) {
     {
       name: 'description',
       content:
-        'thefirm.com.br — o manifesto de O Outro José. Um fotolog de loucuras geradas por IA, sem cliente e sem permissão.',
+        'thefirm.com.br — o manifesto de O Outro José. Loucuras geradas por IA, sem cliente e sem permissão.',
     },
   ]
 }
@@ -56,8 +56,8 @@ export default function Manifiesto() {
             </p>
             <p>
               Este é o domínio mais velho que tenho. Fiquei vinte anos renovando ele sem nada
-              dentro. Agora ele virou um <b className="text-bone">fotolog de IA</b>: um mural
-              das minhas loucuras.
+              dentro. Agora ele virou um <b className="text-bone">mural</b> das minhas loucuras
+              de IA.
             </p>
             <p>
               A ideia é simples. Eu tenho uma imagem na cabeça, peço pra máquina, e ela me
@@ -103,7 +103,7 @@ export default function Manifiesto() {
               a ninguém.
             </p>
             <p className="mt-8 font-mono text-[13px] uppercase tracking-[2px] text-magenta">
-              — the firm · o fotolog de o outro josé · transmissão contínua
+              — the firm · as loucuras de o outro josé · transmissão contínua
             </p>
           </motion.div>
         </motion.div>

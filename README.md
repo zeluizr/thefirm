@@ -19,7 +19,7 @@ No es un blog. No es un CMS. La unidad es **media + leyenda + plataformas + esta
 
 ## Áreas
 
-- **Público** — `/` (fotolog de IA: hero com pilha de fotos recentes + mural de loucuras),
+- **Público** — `/` (home: hero com pilha de fotos recentes + mural de loucuras de IA),
   `/manifiesto` (manifesto de O Outro José), `/about` (concepto), `/archive` (o arquivo completo).
 - **Admin privado** — `/admin` (dashboard, lista, crear, subir, agendar, estado por plataforma, publicar ahora, dry-run, historial).
 
@@ -105,8 +105,9 @@ pnpm run dev            # dev server (Vite + SSR)
 pnpm run build          # build de producción → ./build
 pnpm run start          # sirve el build (react-router-serve)
 pnpm run migrate        # aplica las migraciones de /migrations
-pnpm run seed           # datos de ejemplo
-pnpm run seed:fotolog   # posts placeholder para el fotolog de la home
+pnpm run seed           # datos de ejemplo (admin)
+pnpm run seed:samples   # posts placeholder (dev) para ver el mural de la home
+pnpm run seed:posts     # crea posts a partir de tus archivos en public/posts/
 pnpm run publish-due    # procesa los items pronto/agendados vencidos (worker)
 pnpm run dry-run        # simula los vencidos sin persistir nada
 pnpm run hash-password -- 'pass'   # bcrypt hash para ADMIN_PASSWORD_HASH

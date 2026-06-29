@@ -1,7 +1,7 @@
-// Smoke-test posts for the fotolog home. Placeholder images + PT captions so we
+// Smoke-test posts for the home wall. Placeholder images + PT captions so we
 // can see the layout before the real posts arrive. Each is run through the
 // publisher in DRY_RUN, so it ends up `completed` with mock platform links.
-// Usage: npm run seed:fotolog
+// Dev only — do NOT run this in production. Usage: npm run seed:samples
 import { getPool } from '../app/services/db.server'
 import * as media from '../app/services/media.server'
 import { processMediaItem } from '../app/services/publisher.server'
@@ -27,7 +27,7 @@ const samples: Sample[] = [
   { title: 'Peixe-neon no asfalto', caption: 'Um cardume atravessou a avenida às 3 da manhã. Ninguém viu, só a máquina. #ia #thefirm', ratio: '1/1', platforms: ['instagram', 'threads'] },
   { title: 'Retrato do Outro José', caption: 'A IA tentou me desenhar. Saiu isso. Acho que ela me conhece melhor que eu. #ooutrojose', ratio: '3/4', platforms: ['x', 'instagram', 'facebook', 'threads'] },
   { title: 'Jardim que respira', caption: 'Plantas de vidro soprado, pólen de estática. O jardim respirava no ritmo do meu modem. #loucura', ratio: '4/5', platforms: ['instagram'] },
-  { title: 'Tempestade de tipografia', caption: 'Choveu Archivo Black sobre a cidade. As letras afundaram no concreto roxo. #ia #fotolog', ratio: '1/1', platforms: ['x', 'threads'] },
+  { title: 'Tempestade de tipografia', caption: 'Choveu Archivo Black sobre a cidade. As letras afundaram no concreto roxo. #ia #loucura', ratio: '1/1', platforms: ['x', 'threads'] },
   { title: 'Skeleton DJ', caption: 'O esqueleto puxou o vinil e o void inteiro começou a pulsar magenta. #thefirm #loucura', ratio: '3/4', platforms: ['x', 'instagram', 'threads'] },
   { title: 'Mapa de um sonho', caption: 'Tracei o mapa do sonho de ontem. Tinha um rio onde deveria ter uma rua. #ia', ratio: '4/5', platforms: ['instagram', 'facebook', 'threads'] },
   { title: 'Lua de porcelana', caption: 'A lua rachou e dentro dela tinha outra lua, menor, sorrindo. #ooutrojose #loucura', ratio: '1/1', platforms: ['x', 'instagram', 'threads'] },
@@ -52,7 +52,7 @@ async function main() {
     n += 1
     console.log(`  ${slug}  ${s.title}`)
   }
-  console.log(`\nSeeded ${n} fotolog posts (placeholders).`)
+  console.log(`\nSeeded ${n} sample posts (placeholders).`)
   await getPool().end()
 }
 

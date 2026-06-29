@@ -85,7 +85,7 @@ export function Footer() {
           <div className='font-mono text-[12px] leading-[1.85] tracking-[1px] text-bone-dim'>
             São Paulo → Santiago ·{' '}
             <span className='text-magenta'>transmissão contínua</span>
-            <br />© thefirm.com.br — o fotolog de IA de O Outro José
+            <br />© thefirm.com.br — as loucuras de IA de O Outro José
             <br />
             best viewed no escuro, com o volume alto
           </div>

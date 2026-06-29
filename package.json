@@ -9,7 +9,8 @@
     "typecheck": "react-router typegen && tsc",
     "migrate": "tsx scripts/migrate.ts",
     "seed": "tsx scripts/seed.ts",
-    "seed:fotolog": "tsx scripts/seed-fotolog.ts",
+    "seed:samples": "tsx scripts/seed-samples.ts",
+    "seed:posts": "tsx scripts/seed-posts.ts",
     "publish-due": "tsx scripts/publish-due.ts",
     "dry-run": "tsx scripts/dry-run.ts",
     "hash-password": "tsx scripts/hash-password.ts"
