@@ -21,6 +21,7 @@ export default [
   route('admin', 'routes/admin/layout.tsx', [
     index('routes/admin/index.tsx'),
     route('posts', 'routes/admin/posts.tsx'),
+    route('posts/:id', 'routes/admin/post.tsx'),
     route('categories', 'routes/admin/categories.tsx'),
     route('blocklist', 'routes/admin/blocklist.tsx'),
     route('logs', 'routes/admin/logs.tsx'),

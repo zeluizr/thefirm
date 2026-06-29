@@ -76,7 +76,9 @@ export default function AdminPosts({ loaderData }: Route.ComponentProps) {
                   </Badge>
                   <Badge variant="outline">{p.category.name}</Badge>
                 </div>
-                <span className="font-bold">{p.title}</span>
+                <Link to={`/admin/posts/${p.id}`} className="font-bold hover:underline">
+                  {p.title}
+                </Link>
                 <span className="font-mono text-xs text-muted-foreground">{p.slug}</span>
                 {p.moderationReason && (
                   <span className="font-mono text-xs text-destructive">
