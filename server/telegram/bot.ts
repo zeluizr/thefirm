@@ -21,6 +21,11 @@ export async function getBot(): Promise<Bot> {
   if (!_bot || _bot.token !== cfg.telegramBotToken) {
     const bot = new Bot(cfg.telegramBotToken)
     registerHandlers(bot)
+    // um erro num único update (ex.: callback velho) não pode derrubar o bot
+    bot.catch((err) => {
+      const e = err.error
+      console.error('[bot] erro no handler:', e instanceof Error ? e.message : e)
+    })
     _bot = { token: cfg.telegramBotToken, bot }
   }
   return _bot.bot

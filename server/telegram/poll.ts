@@ -6,9 +6,11 @@ import { getBot } from './bot'
 // (em produção use o webhook /api/webhooks/telegram, não o polling)
 async function main(): Promise<void> {
   const bot = await getBot()
-  // webhook e polling são mutuamente exclusivos — limpa o webhook antes
-  await bot.api.deleteWebhook({ drop_pending_updates: false })
+  // webhook e polling são mutuamente exclusivos — limpa o webhook e descarta
+  // updates pendentes (toques velhos da fila, que dariam 'query is too old')
+  await bot.api.deleteWebhook({ drop_pending_updates: true })
   await bot.start({
+    drop_pending_updates: true,
     onStart: (me) => console.log(`[bot:dev] @${me.username} ouvindo (ctrl+c pra sair)`),
   })
 }
