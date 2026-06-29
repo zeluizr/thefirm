@@ -1,7 +1,18 @@
+import { existsSync } from 'node:fs'
+
+import { InputFile } from 'grammy'
+
 import { runtimeConfig } from '../lib/config'
 import { db } from '../lib/db'
+import { localMediaPath } from '../lib/storage'
 import { getBot } from './bot'
 import { buildCaption, mainKeyboard } from './format'
+
+// envia o arquivo local (bytes) se existir; senão cai pra URL
+function mediaSource(url: string): InputFile | string {
+  const path = localMediaPath(url)
+  return existsSync(path) ? new InputFile(path) : url
+}
 
 // envia o preview ao chat do admin com os botões de aprovação (CLAUDE.md §5.5)
 export async function notifyPost(postId: string): Promise<void> {
@@ -20,10 +31,16 @@ export async function notifyPost(postId: string): Promise<void> {
 
   let messageId: number
   if (post.videoUrl) {
-    const sent = await bot.api.sendVideo(chatId, post.videoUrl, { caption, reply_markup })
+    const sent = await bot.api.sendVideo(chatId, mediaSource(post.videoUrl), {
+      caption,
+      reply_markup,
+    })
     messageId = sent.message_id
   } else if (post.imageUrl) {
-    const sent = await bot.api.sendPhoto(chatId, post.imageUrl, { caption, reply_markup })
+    const sent = await bot.api.sendPhoto(chatId, mediaSource(post.imageUrl), {
+      caption,
+      reply_markup,
+    })
     messageId = sent.message_id
   } else {
     const sent = await bot.api.sendMessage(chatId, caption, { reply_markup })

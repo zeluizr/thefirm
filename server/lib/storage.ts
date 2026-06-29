@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { basename, join } from 'node:path'
 
 import { env } from './env'
 
@@ -20,6 +20,13 @@ function extFor(mimeType: string): string {
 export async function ensureMediaDir(): Promise<string> {
   await mkdir(env.MEDIA_DIR, { recursive: true })
   return env.MEDIA_DIR
+}
+
+// caminho local em disco correspondente a uma mediaUrl (pra enviar bytes ao Telegram
+// em vez de URL — Telegram não alcança localhost e dispensa URL pública em prod)
+export function localMediaPath(url: string): string {
+  const name = basename(new URL(url, env.APP_URL).pathname)
+  return join(env.MEDIA_DIR, name)
 }
 
 // URL pública absoluta (sob APP_URL) de um arquivo já salvo em MEDIA_DIR
